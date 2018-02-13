@@ -35,7 +35,8 @@ var pike = {
     for (var i = 0; i < hours.length; i++) {
       this.cookiesPerHour.push(this.roundCookies(this.customersPerHour[i], this.avgCookiesSold));
     }
-  }
+  },
+  render: [this.customersPerHour, this.cookiesPerHour],
 };
 pike.getCustomersPerHour();
 pike.getCookiesPerHour();
