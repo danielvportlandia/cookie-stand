@@ -19,16 +19,16 @@ var pike = {
   maxCustomers: 65,
   avgCookiesSold: 6.3,
   customersPerHour: [],
-  numCustomers: function() { //random number of customers
+  numCustomers: function() { //generates a random number of customers.
     return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers;
   },
-  numCustomersPerHour: function() {
+  getCustomersPerHour: function() { //fills the customersPerHour array.
     for (var i = 0; i < hours.length; i++) {
       this.customersPerHour.push(this.numCustomers());
     }
   }
 };
-pike.numCustomersPerHour();
+pike.getCustomersPerHour();
 // for (i = 0; i < hours.length; i++) {
 //totalCookies for the day method
 //cookiesSoldEachHour = [] method
