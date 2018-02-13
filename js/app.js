@@ -12,23 +12,27 @@
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-var minCustomers = 0;
-var maxCustomers = 0;
-var numCustomers = 0;
 
 var pike = {
   name: '1st and Pike',
   minCustomers: 23,
-  maxCustomers: 65, 
+  maxCustomers: 65,
   avgCookiesSold: 6.3,
+  customersPerHour: [],
   numCustomers: function() { //random number of customers
     return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers;
-    //totalCookies for the day method
-    //cookiesSoldEachHour = [] method
-    // return [];
+  },
+  numCustomersPerHour: function() {
+    for (var i = 0; i < hours.length; i++) {
+      this.customersPerHour.push(this.numCustomers());
+    }
   }
 };
-  // for (i = 0; i < hours.length; i++) {
+pike.numCustomersPerHour();
+// for (i = 0; i < hours.length; i++) {
+//totalCookies for the day method
+//cookiesSoldEachHour = [] method
+// return [];
 //customers each hour = [] method to calculate
 //totalCookies for the day method
 //cookiesSoldEachHour = [] method
