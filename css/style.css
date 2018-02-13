@@ -1,3 +1,7 @@
 .salesList {
     list-style: none;
 }
+
+.total {
+    font-weight: bold;
+}
