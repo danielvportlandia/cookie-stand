@@ -19,6 +19,7 @@ var pike = {
   maxCustomers: 65,
   avgCookiesSold: 6.3,
   customersPerHour: [],
+  cookiesPerHour: [],
   numCustomers: function() { //generates a random number of customers.
     return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers;
   },
@@ -26,9 +27,18 @@ var pike = {
     for (var i = 0; i < hours.length; i++) {
       this.customersPerHour.push(this.numCustomers());
     }
+  },
+  roundCookies: function(a, b) { //rounds the cookies up to the nearest whole cookie.
+    return Math.ceil(a * b);
+  },
+  getCookiesPerHour: function() { //generates cookies per hour.
+    for (var i = 0; i < hours.length; i++) {
+      this.cookiesPerHour.push(this.roundCookies(this.customersPerHour[i], this.avgCookiesSold));
+    }
   }
 };
 pike.getCustomersPerHour();
+pike.getCookiesPerHour();
 // for (i = 0; i < hours.length; i++) {
 //totalCookies for the day method
 //cookiesSoldEachHour = [] method
