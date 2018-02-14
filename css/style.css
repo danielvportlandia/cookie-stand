@@ -1,7 +1,38 @@
+body {
+    background-color: gray;
+}
+
 .salesList {
     list-style: none;
 }
 
 .total {
     font-weight: bold;
+}
+
+table {
+    border: 10px solid blue;
+    border-top-style: solid;
+    border-top-width: px;
+    border-right-style: solid;
+    border-right-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-left-style: solid;
+    border-left-width:5px;
+    width: 80%;
+}
+
+tr {
+    background-color: salmon;
+    border-radius: 10%;
+}
+
+th {
+    padding-top: 1em;
+}
+
+td {
+    padding: 1em;
+    text-align: center;
 }
