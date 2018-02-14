@@ -9,13 +9,35 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 
 </head>
 
 <body>
+  
+  <h1>Pat's Salmon Cookies</h1>
+
+  <form id="sales-form">
+    <fieldset>
+      <legend>Sales form</legend>
+      <label name="name">Store Name: </label>
+      <input name="name" type="text" size="20" />
+
+      <label name="minCustomersPerHour">Minimum Customers Per Hour: </label>
+      <input name="minCustomersPerHour" type="text" size="4">
+
+      <label name="maxCustomersPerHour">Maximum customers per hour: </label>
+      <input name="maxCustomersPerHour" type="text" size="5">
+
+      <label name="avgCookiesPerHour">Average cookies per hour:</label>
+      <input name="avgCookiesPerHour" type="text" size="5">
+
+      <label name="submit-button"></label>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
 
 </table>
-<h1>Pat's Salmon Cookies</h1>
 
 <h2>Store Totals</h2>
   <table id='storeTable'>
