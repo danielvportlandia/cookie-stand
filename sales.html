@@ -20,27 +20,25 @@
   <form id="sales-form">
     <fieldset>
       <legend>Sales form</legend>
-      <label name="name">Store Name: </label>
-      <input name="name" type="text" size="20" />
+      <label for="storeName">Store Name: </label>
+      <input name="storeName" type="text" size="20" />
 
-      <label name="minCustomersPerHour">Minimum Customers Per Hour: </label>
-      <input name="minCustomersPerHour" type="text" size="4">
+      <label for="minCustomersPerHour">Minimum Customers Per Hour: </label>
+      <input name="minCustomersPerHour" type="number" min="0">
 
-      <label name="maxCustomersPerHour">Maximum customers per hour: </label>
-      <input name="maxCustomersPerHour" type="text" size="5">
+      <label for="maxCustomersPerHour">Maximum customers per hour: </label>
+      <input name="maxCustomersPerHour" type="number" min="0">
 
-      <label name="avgCookiesPerHour">Average cookies per hour:</label>
-      <input name="avgCookiesPerHour" type="text" size="5">
+      <label for="avgCookiesPerHour">Average cookies per hour:</label>
+      <input name="avgCookiesPerHour" type="number" min="0" step=".1">
 
-      <label name="submit-button"></label>
       <button type="submit">Submit</button>
     </fieldset>
   </form>
 
-</table>
-
-<h2>Store Totals</h2>
-  <table id='storeTable'>
+  
+  <h2>Store Totals</h2>
+  <table id='storeTable'></table>
     
     <script src="js/app.js"></script>
 </body>
