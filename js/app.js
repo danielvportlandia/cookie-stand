@@ -1,9 +1,9 @@
 var hours = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: '];
-// var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 var stores = [];
 var tableData = document.getElementById('storeTable');
+var salesForm = document.getElementById('sales-form');
 
-function Store(name, minCustomers, maxCustomers, avgCookiesSold) {
+function Store(name, minCustomers, maxCustomers, avgCookiesSold) { //Store constructor function.
   this.name = name;
   this.minCustomers = minCustomers;
   this.maxCustomers = maxCustomers;
@@ -36,29 +36,29 @@ Store.prototype.calcCookiesPerHour = function() { //generates cookies per hour.
   }
 };
 
-Store.prototype.render = function() {
+Store.prototype.render = function() { //Render method that fills table with data.
   this.calcCookiesPerHour();
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   tdEl.textContent = this.name;
   trEl.appendChild(tdEl);
-  for (var i = 0; i < hours.length; i++) {
+  for (var i = 0; i < hours.length; i++) { //Renders store data and fills the td elements with cookies per hour.
     tdEl = document.createElement('td');
     tdEl.textContent = this.cookiesPerHour[i];
     trEl.appendChild(tdEl);
   }
   tdEl = document.createElement('td');
-  tdEl.textContent = this.cookiesSoldPerDay;
+  tdEl.textContent = this.cookiesSoldPerDay; //Last column calculates all the cookies sold per day.
   trEl.appendChild(tdEl);
   tableData.appendChild(trEl);
 };
 
-function makeHeaderRow() {
+function makeHeaderRow() { //Creates the header row.
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
   thEl.textContent = 'Locations';
   trEl.appendChild(thEl);
-  for (var i = 0; i < hours.length; i++) {
+  for (var i = 0; i < hours.length; i++) { //Populates header row with the hours array.
     thEl = document.createElement('th');
     thEl.textContent = hours[i];
     trEl.appendChild(thEl);
@@ -69,29 +69,29 @@ function makeHeaderRow() {
   tableData.appendChild(trEl);
 }
 
-function makeStoreRows() {
+function makeStoreRows() { //This function calls the render function, filling the table with data.
   for (var i = 0; i < stores.length; i++) {
     stores[i].render();
   }
 }
 
-function makeFooterRow() {
+function makeFooterRow() { //Creates the footer row.
   var trEl = document.createElement('tr');
   trEl.setAttribute('id', 'footer-row');
   var thEl = document.createElement('th');
   thEl.textContent = 'Totals';
   trEl.appendChild(thEl);
-  for (var i = 0; i < hours.length; i++) {
+  for (var i = 0; i < hours.length; i++) { //Outer loop iterates through hours while the inner loop iterates through the stores.
     var storeCookieTotals = 0;
     for (var j = 0; j < stores.length; j++) {
-      storeCookieTotals += stores[j].cookiesPerHour[i];
+      storeCookieTotals += stores[j].cookiesPerHour[i]; //Each iteration the cookiesPerHour index matches [i] while the stores index is [j].
     }
     thEl = document.createElement('th');
     thEl.textContent = storeCookieTotals;
     trEl.appendChild(thEl);
   }
   var grandTotal = 0;
-  for (i = 0; i < stores.length; i++) {
+  for (i = 0; i < stores.length; i++) { //Calculates the grand total between the total cookies sold per hour and cookies sold per day.
     grandTotal += stores[i].cookiesSoldPerDay;
   }
   thEl = document.createElement('th');
@@ -100,14 +100,12 @@ function makeFooterRow() {
   tableData.appendChild(trEl);
 }
 
-console.table(stores);
-
 makeHeaderRow();
 makeStoreRows();
 makeFooterRow();
 
-var salesForm = document.getElementById('sales-form');
-
+/*Data entered in the forms is used to create and render a new Store instance, then the values are reset, the footer is removed then readded
+so that the makeFooterRow function can remake the row with the updated totals of all stores.*/
 function submitStoreData(event) {
   event.preventDefault();
   var newStore = new Store(salesForm.storeName.value, parseInt(salesForm.minCustomersPerHour.value), parseInt(salesForm.maxCustomersPerHour.value), parseFloat(salesForm.avgCookiesPerHour.value));
@@ -119,6 +117,16 @@ function submitStoreData(event) {
 }
 
 salesForm.addEventListener('submit', submitStoreData);
+
+// function invalidSubmissionAlert(event) {
+
+// }
+
+// Need alert if value of either the who or comment
+
+// Is empty with !event.target.says.value || !event.target.who.value
+// Return an alert
+
 
 // event listener for the CLEAR ALL STORES button!
 // clearChatList.addEventListener('click', function() {
