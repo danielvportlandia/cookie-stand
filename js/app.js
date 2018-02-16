@@ -39,6 +39,7 @@ Store.prototype.calcCookiesPerHour = function() { //generates cookies per hour.
 Store.prototype.render = function() { //Render method that fills table with data.
   this.calcCookiesPerHour();
   var trEl = document.createElement('tr');
+  trEl.className = 'table-data';
   var tdEl = document.createElement('td');
   tdEl.textContent = this.name;
   trEl.appendChild(tdEl);
@@ -117,10 +118,27 @@ function submitStoreData(event) {
 }
 
 salesForm.addEventListener('submit', submitStoreData);
+salesForm.addEventListener('click', updateStoreData);
 
-// function invalidSubmissionAlert(event) {
+function updateStoreData(event) {
+  if (event.target === 'table-data') {
+    alert('Cell clicked');
+  }
+}
 
+
+// function updateStoreData(event) {
+//   var tdEl = document.getElementsByTagName('td');
+//   stores.trEl.target
+//   var highlight = event.target.trEl.ParentNode;
+//   console.log(highlight);
+
+//click event on the tr
 // }
+
+//step 1, select the element nodes that the click responds to.
+//step 2, set eventlistener and click (done)
+//step 3,
 
 // Need alert if value of either the who or comment
 
