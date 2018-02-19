@@ -1,5 +1,127 @@
+* {
+    font-family: 'Righteous', sans-serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+}
+
+header {
+    height: 160px;
+}
+
+nav {
+    background-color: #6BBAA7;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+nav li {
+    display: inline;
+    margin-left: 110px;
+    font-size: 20px;
+    background-color: #ff8c67;
+    border-radius: 35%;
+    padding: 2px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    padding-bottom: 25px;
+}
+
 body {
-    background-color: gray;
+    background-image: url(../img/seattle-skyline.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#hours {
+    margin-top: 50px;
+    background: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+#locations {
+    text-align: center;
+}
+
+#locations p {
+    width: 200px;
+    font-size: 20px;
+    background: none;
+    display: inline-block; 
+}
+
+#hero {
+    margin-top: 50px;
+    margin-left: 16%;
+}
+
+#slogan {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    background: transparent;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    padding: 25px;
+    background-color: #ff8c67;
+    margin-top: 200px;
+}
+
+section img {
+    margin-left: 15%;
+    border: 10px solid #8b94cd;
+    width: 800px;
+}
+
+#orders {
+    display: inline-block;
+    margin-bottom: 100px;
+}
+
+#orders img {
+    border: 10px solid #8b94cd;
+    height: 300px;
+    width: 300px;
+}
+
+p {
+    font-size: 30px;
+    background-color: #6BBAA7;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #B6A19E;
+}
+
+footer p {
+    background: none;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#storeTotals {
+    background: none;
+    text-align: left;
+    margin-top: 50px;
 }
 
 .salesList {
@@ -12,7 +134,7 @@ body {
 
 table {
     font-family: Verdana, sans-serif;
-    border: 10px solid blue;
+    border: 10px solid #6BBAA7;
     border-top-style: solid;
     border-top-width: px;
     border-right-style: solid;
@@ -29,14 +151,14 @@ tr {
 }
 
 th {
-    background-color: salmon;
+    background-color: #ff8c67;
     padding-top: 1em;
 }
 
 td {
     padding: 1em;
     text-align: center;
-    background-color: white;
+    background-color: #B6A19E;
 }
 
 ul {

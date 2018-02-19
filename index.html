@@ -8,40 +8,63 @@
   <title>The HTML5 Herald</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-  <link rel="stylesheet" href="css/index-style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Righteous" rel="stylesheet">
 
 </head>
 
 <header>
-  <h1>Pat's Salmon Cookies</h1>
+  <h1 id="top">Pat's Salmon Cookies</h1>
   <nav>
       <ul>
-        <li>Our Story</li>
-        <li>Customer Reviews</li>
-        <li>Online Orders</li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#fresh-ingredients">Fresh Ingredients</a></li>
+        <li><a href="#orders">Online Orders</a></li>
+        <li><a href="sales.html">Employee Login</a></li>
       </ul>
-    </nav>
+  </nav>
 </header>
 
 <body>
-
-
-    <div id="banner">
-      <img id="logo-background" src="img/bakery-banner.jpg" alt="Cookie banner" title="Cookie banner">
-      <img id="logo" src="img/salmon-totem.jpg" alt="Bakery Logo" title="Bakery Logo">
-    </div>
-    <p id="slogan">Pat's Salmon Cookies,<br>
-      all that salmon flavor<br>
-      none of that salmonella
+  <main>
+    <p id="hours">Hours: M-F 6AM - 10PM | Saturday 10AM - 10PM | Sunday CLOSED</p>
+    <section id="locations">
+      <p>Pike Place<br>1st Ave and Pike St<br>Seattle, WA 98101<br>(206) 555-0249</p>
+      <p>Seatac Airport<br>(near Alaska Airlines gate)<br>(206) 555-0250</p>
+      <p>Seattle Center<br>305 Harrison St<br>Seattle, WA 98109<br>(206) 555-0251</p>
+      <p>Capitol Hill<br>3245 Mercer St<br>Seattle, WA 98102<br>(206) 555-0252</p>
+      <p>Alki<br>63rd Ave SW<br>Seattle, WA 98116<br>(206) 555-0253</p>
+    </section>
+    <img id="hero" src="img/salmon.png">
+    <p id="slogan">Pat's Salmon Cookies,
+      all that salmon flavor
+      none of the salmonella.
     </p>
-    <h2>Our Big Fish Story</h2>
-    <div id="family-div">
-    <p>We are a family-owned local bakery chain specializing in the exotic market of oceanic confections with shops set up all throughout Seattle. Come to any of our branches and enjoy a unique treat that will leave you saying. <br> "Wow, that definitely tastes like fish!" </p>
-    <img id="family" src="img/family.jpg" alt="Pat's wife, son, and daughter sharing some salmon cookies." title="Pat's wife, son, and daughter sharing some salmon cookies.">
-    </div>
-
+    <section>
+      <h2 id="about-us">Our Big Fish Story</h2>
+      <img id="family" src="img/family.jpg" alt="Pat's wife, son, and daughter sharing some salmon cookies." title="Pat's wife, son, and daughter sharing some salmon cookies.">
+      <p>We are a family-owned local bakery chain specializing in the exotic market of oceanic confections with shops set up all throughout Seattle. Come to any of our branches and enjoy a unique treat that will leave you saying. <br> "Wow, that definitely tastes like fish!" 
+      </p>
+    </section>
+    <section>
+      <h2 id="fresh-ingredients">Only the Freshest Ingredients</h2>
+      <img src="img/chinook.jpg" alt="Chinook fish" title="Chinook fish">
+      <p>We only use the freshest catch of the day straight from Pike's Place Market in our cookies! If salmon isn't your fancy then try our NEW Chinookies&copy; made only from locally sourced chinook of course. Our cookies are gluten-free and contain 0 grams of sugar.</p>
+    </section>
+    <section id="orders">
+      <h2>Online Orders</h2>
+      <p>Come take a peek at our online store where you'll find more than just our delicous cookies.</p>
+      <img src="img/fish.jpg" alt="Chinookies&copy;" title="Chinookies&copy;">
+      <img src="img/frosted-cookie.jpg" alt="Salmon cookie" title="Salmon cookie">
+      <img src="img/cutter.jpeg" alt="Salmon cookie cutter." title="Salmon cookie cutter.">
+      <img src="img/shirt.jpg" alt="Pat's Salmon Cookies t-shirt" title="Pat's Salmon Cookies t-shirt">
+    </section>
     <script src="js/app.js"></script>
+  </main>
 </body>
+
+<footer>
+  <p><a href="#top">Back to top</a></p>
+</footer>
 
 </html>
