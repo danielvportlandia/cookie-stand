@@ -125,30 +125,3 @@ function updateStoreData(event) {
     alert('Cell clicked');
   }
 }
-
-
-// function updateStoreData(event) {
-//   var tdEl = document.getElementsByTagName('td');
-//   stores.trEl.target
-//   var highlight = event.target.trEl.ParentNode;
-//   console.log(highlight);
-
-//click event on the tr
-// }
-
-//step 1, select the element nodes that the click responds to.
-//step 2, set eventlistener and click (done)
-//step 3,
-
-// Need alert if value of either the who or comment
-
-// Is empty with !event.target.says.value || !event.target.who.value
-// Return an alert
-
-
-// event listener for the CLEAR ALL STORES button!
-// clearChatList.addEventListener('click', function() {
-//   chatList.innerHTML = '';
-//   console.log('You just cleared the chat list!');
-//   allComments = [];
-// });
